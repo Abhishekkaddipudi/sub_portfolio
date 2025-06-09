@@ -1,0 +1,93 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #191919;
+    color: #c7c7c7;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1280px;
+    margin-top: 20vh;
+    
+
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 30%;
+    height: 30%;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+.banner {
+    width: 70%;
+    
+    
+  
+}
+
+.main-title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    line-height: 1.2;
+    max-width: 48rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+
+/* Main Content */
+.main-content {
+    max-width: 1280px;
+    
+    
+    padding: 0 0.25rem 0.25rem;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns:1fr;
+    margin-top: 5%; 
+    margin-bottom: 5%;
+    
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr 3fr;
+    }
+    .profile-img {
+    width: 10%;
+    height: 10%;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+.contact-section {
+    margin-left: 10vh;
+}
+.main-content {
+    margin-left: 10vh;
+}
+.skills-section {
+    margin-left: 10vh;
+}
+.container {
+       margin-left: 10vh;
+}
+}

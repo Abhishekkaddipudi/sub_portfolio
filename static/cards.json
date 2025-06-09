@@ -1,0 +1,74 @@
+[
+  {
+    "class": "card card-purple",
+    "img": {
+      "alt": "Analysis image",
+      "class": "card-img",
+      "src": "https://i.redd.it/tpca4a8vfol51.png"
+    },
+    "title": "WhatsApp Chat Analysis Project",
+    "description": "This project involves the analysis of a WhatsApp chat to uncover meaningful patterns and trends within the conversation.",
+    "descriptionClass": "card-description purple-text",
+    "href": "https://github.com/Abhishekkaddipudi/Watsapp_chat_analysis"
+  },
+  {
+    "class": "card card-green",
+    "img": {
+      "alt": "Youtube_comment_scrapper_using_selenium",
+      "class": "card-img",
+      "src": "https://cdn.analyticsvidhya.com/wp-content/uploads/2019/05/youtube-data-scraping.png"
+    },
+    "title": "Youtube Comments Scrapper Using Selenium",
+    "description": "A Python-based automation tool to scrape YouTube comments using Selenium, and analyze them with an LLM model (e.g., LLaMA 3) through Ollama's local API",
+    "descriptionClass": "card-description green-text",
+    "href": "https://github.com/Abhishekkaddipudi/Youtube_comment_scrapper_using_selenium"
+  },
+  {
+    "class": "card card-red",
+    "img": {
+      "alt": "Bold text ROCK RUSTER on a red background simulating a project banner",
+      "class": "card-img",
+      "src": "https://miro.medium.com/v2/resize:fit:1400/1*XQ6XFqWpMxen4sKwnLg9Aw.png"
+    },
+    "title": "Credit Score Classifier",
+    "description": "This project aims to build a Credit Score Classifier to predict credit scores based on a credit score dataset. The dataset is sourced from Kaggle.",
+    "descriptionClass": "card-description red-text",
+    "href": "https://github.com/Abhishekkaddipudi/Credit_score"
+  },
+  {
+    "class": "card card-blue",
+    "img": {
+      "alt": "Bold text ROCK RUSTER on a red background simulating a project banner",
+      "class": "card-img",
+      "src": "https://blogs.diggibyte.com/wp-content/uploads/2024/09/Screenshot-2024-08-23-165538.png"
+    },
+    "title": "Hospital Wait Time Analysis",
+    "description": " The Power BI project on Hospital Data and Wait Time is a strategic initiative aimed at enhancing and optimizing the wait times within a hospital setting.",
+    "descriptionClass": "card-description blue-text",
+    "href": "https://github.com/Abhishekkaddipudi/Hospital-Wait-Time-Analysis"
+  },
+  {
+    "class": "card card-black",
+    "img": {
+      "alt": "Bold text ROCK RUSTER on a red background simulating a project banner",
+      "class": "card-img",
+      "src": "https://www.newssamachar.com/wp-content/uploads/2023/01/IPL-2023-All-schedule-Venues-Dates-Timings-Teams-list.jpg"
+    },
+    "title": "IPL Data Analysis",
+    "description": "The IPL Data Analysis project focused on exploring and understanding the trends, patterns, and statistics within the IPL dataset.",
+    "descriptionClass": "card-description black-text",
+    "href": "https://github.com/Abhishekkaddipudi/IPL-2008-2022-Data-Analysis"
+  },
+  {
+    "class": "card card-brown",
+    "img": {
+      "alt": "Bold text ROCK RUSTER on a red background simulating a project banner",
+      "class": "card-img",
+      "src": "https://opengraph.githubassets.com/485f7d41fb37ab9ceecd18799b3b49ac0f3f44f3cad16ac5da2a39cb918be7ba/Abhishekkaddipudi/modelLab"
+    },
+    "title": "ModelLab Python Package",
+    "description": "The primary objective of the package is to offer a curated ensemble of renowned scikit-learn models, enabling users to conveniently train all models with a single function call.",
+    "descriptionClass": "card-description brown-text",
+    "href": "https://example.com/rock-ruster"
+  }
+]

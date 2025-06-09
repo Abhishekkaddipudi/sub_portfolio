@@ -1,0 +1,58 @@
+
+/* Bio Section */
+.bio-section {
+    margin-right: 3rem;
+    padding-right: 5%;
+    border-right: 2px solid #ccc;
+
+}
+
+.section-title {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+}
+
+.bio-text {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    max-width: 32rem;
+    line-height: 1.6;
+
+}
+
+.bio-text-small {
+    color: white;
+    font-size: 0.875rem;
+    max-width: 32rem;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+
+    .bio-section {
+
+    border-right: none;
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+}
+.bio-text {
+    width: 100%;
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.section-title {
+         display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+}

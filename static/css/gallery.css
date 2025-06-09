@@ -1,0 +1,46 @@
+
+/* Gallery Section */
+.gallery-section h2 {
+    margin-bottom: 0.25rem;
+}
+
+.case-studies-link {
+    display: inline-flex;
+    align-items: center;
+    color: #c7c7c7;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.case-studies-link:hover {
+    color: white;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+

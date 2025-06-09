@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="{{ url_for('portfolio.static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('portfolio.static', filename='css/bio.css') }}">
+    <link rel="stylesheet" href="{{ url_for('portfolio.static', filename='css/cards.css') }}">
+    <link rel="stylesheet" href="{{ url_for('portfolio.static', filename='css/contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('portfolio.static', filename='css/gallery.css') }}">
+    <link rel="stylesheet" href="{{ url_for('portfolio.static', filename='css/skills.css') }}">
+    <link rel="stylesheet" href="{{ url_for('portfolio.static', filename='css/social.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img alt="Illustration of a face with black hair and round glasses, white skin tone" 
+                 class="profile-img" 
+                 src="{{ url_for('portfolio.static', filename='images/protrait1.png') }}">
+           
+        </div>
+         <h1 class="main-title">Hey there! I am Abhishek</h1>
+        <div class="social-links">
+            <a class="social-link" href="#">
+                <i class="fab fa-linkedin linkedin-icon"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a class="social-link" href="https://github.com/Abhishekkaddipudi">
+                <i class="fab fa-github github-icon"></i>
+                <span>GitHub</span>
+            </a>
+            <a class="social-link" href="#">
+                <img alt="Tableau logo icon with multiple colors" class="icon-img" 
+                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAQlBMVEVHcExwmaVwmaVlgJtwmaXrkShwmaVah5vrkShah5vodizodizodixbZZFbZZFbZZFbZZHHIDYeRH7HIDYeRH4eRH76/o4UAAAAFXRSTlMAEPw7VXizePb2NP3ws1P8EHh49vNnJOVcAAAAr0lEQVR4AX3Q0RaFEBCF4Q1SCKT3f9WTuaE1R99FN/9iTHgRAmtSYkVpKbUCYwyATT42ANZitu/zyeNgccyco9mJodfCHsSyCIzIrnUOWM70nkdapQsBeK+iNgVgRKJOhU5LzWNMEYCQnYDzIQRPH4ecuvwZv6/9fhApZY61YnZd809o7V90jsVykQJSW7vv1iqLOY/Irk1pOVPFlKLikVY50+Nkq5BxkhkzV3LG7AcvlAr9NZNe3AAAAABJRU5ErkJggg==">
+                <span>tableau</span>
+            </a>
+            <a class="social-link" href="https://app.powerbi.com/home?experience=power-bi  ">
+                <img alt="PowerBi logo icon with multiple colors" class="icon-img" 
+                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADhklEQVR4AWJhoBI4Xc7eD6itDjh3XbAyjP/ut4iGM2nSqFRTIwggBBEE+jLtvkjTEIA+SgCEIODIwDSVpBSVOPtdV2PMy3/Y+2A7B8uzeLAu173W81y9C4IBARUmXPeXf/QXX/w5fGUAl3c1hCkqMwEqMHuHrxagUH79D36RgOKuHo+tgH/6u//FwFcPYO5Z2wZ3VXQkGqb6OgDC1M8SbVOI0PV1GmCsEHdSXkYgvh4DGqi5q83EthV32lrtawKA6DLWDXYX2Ez79Ag+/6vvfC/egUgWSQU+++1f8c0f13/86J/937/+yGMaK0oVtk8yUN4BKUgliM++860fD/8WnV/+jW/7+89/6Fd/6bHLC8JYpXwCgCi/+ce/L1nUeeU96Y6O+OI9zGvomKbgEwBciFKHVKaJOt6aiY4KFBOfClAx6kmpEIUXQJRK8XzWY1ZA+HQDpeiOws9CKMmKounSJoAo2CcagE4dcXdtTSicUKfCw50SUcjyqd+B0h1SRxlefWVekNNl22bC9iUR/OCv//B7be8qW4qhQuCb3/2uX/j273n/Pz/0/r/+wdi9iUQ5UbrwmLhT5fF47KMAp3crgyISUD8Z/tnv/C7e+/lv/Jov/vNzCrnntRlRlMo96/HYsNJd4PoAgNL4rT/5UznD3VXnsQZ6IuBNFGN69SiXsHuqspkofBBAlHpvuHu22ZZ6LVsI1NNdPdZEHaijrI3B4N5rDyvyEQNkTp06Q840wdu8z7QuCiFdyF111rPCHla52AcBHKj3lMdaVZ2w3YhCunN3wWNW5+27scJjW3kZEH08AuppclfbbaO7LIscRS8zqbye8+rH62k268LHAEqiJ3oZQLabUscg3VNpa93bwadS6R4SwdxTnfERgMk8VXhdQuV1CXEhddQqok6iV0356Sk+Vul83EAO3PPZHk0n2VpXxKs6Om/1E6VCKpVtK2peEPmSM9yeW0l0iEJeVcedOl3ttYTQqXSv09vuWWIP68t2gOipN4OqFHsLcuooNOVVOUpN0ft6DX7tQD4IcIC3m3KUrVWvnk73pNzVY0YqxB2XbYPinl4gfHgHIrr3NurA3BQOdIcoFR2oA0o91RT3EwOvX+KX/A1Xkn/8m78FCgEFgDD//S//LowpQQH4tx88+cZgBYhk9gEDz+f3/dz+TBBQDABgoDLAvfpIRFFhBMkwd30f4P8BgCdHZe87LaAAAAAASUVORK5CYII=">
+                <span>PowerBi</span>
+            </a>
+              <a class="social-link" href="mailto:abhishekkaddipudi123@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-envelope"></i> 
+                        <span>Email</span>
+                    </a>
+        
+        </div>
+    
+    </div>
+  <hr/>  
+    <section class="main-content">
+        <div class="content-grid">
+            <!-- Left Column: Detailed Bio -->
+            <div class="bio-section">
+                <h2 class="section-title">DATA ANALYST</h2>
+                <p class="bio-text">
+                    I’m a data analyst with a strong background in Python, SQL, Excel, and data visualization tools like Power BI and Tableau. With a BCA degree and multiple certifications in AI and problem-solving, I’ve developed a solid foundation in analytics, building everything from custom datasets to AI workflows and advanced Python scripts.
+                </p>
+                <p class="bio-text">
+                   I’m passionate about using data to drive real-world impact especially in ways that benefit underserved communities. I aim to work with purpose-driven teams to transform data into solutions that not only optimize systems but also make meaningful, human-centered change.
+                </p>
+        
+            </div>
+            
+            <!-- Right Column: Case Study Gallery -->
+            <div class="gallery-section">
+                <h2 class="section-title">Case Study GALLERY</h2>
+                <a class="case-studies-link" href="#">
+                    <svg class="menu-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    Case Studies
+                </a>
+                
+                <div id="cards-grid" class="cards-grid">
+              
+                </div>
+            </div>
+        </div>
+    </section>
+ <hr/>  
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <h2 class="skills-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <div class="skill-icon excel-icon">X</div>
+                <span class="skill-name">Excel</span>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon sheets-icon">GS</div>
+                <span class="skill-name">Google Sheets</span>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon sql-icon">DB</div>
+                <span class="skill-name">SQL</span>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon python-icon">Py</div>
+                <span class="skill-name">Python</span>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon ml-icon">ML</div>
+                <span class="skill-name">Machine Learning</span>
+            </div>
+        </div>
+    </section>
+ <hr/>  
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2 class="contact-title">Contact</h2>
+                <div class="contact-links">
+                    <a class="contact-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a class="contact-link" href="mailto:abhishekkaddipudi123@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-envelope"></i> 
+                        <span>Email</span>
+                    </a>
+
+          
+                    <a class="contact-link" href="https://github.com/Abhishekkaddipudi" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                   
+                    <a class="contact-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a class="contact-link" href="https://www.youtube.com/@usualstuff" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                    <a class="contact-link" href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-coffee"></i>
+                        <span>Buy me a Coffee !</span>
+                    </a>
+                </div>
+            </div>
+            <div class="illustration">
+             <div style="height:35%;"></div>
+            
+                   <img alt=" Illustration of Abhishek working on a laptop (cartoon of a person with glasses working on a MacBook)" 
+                  class="banner"
+                 src="{{ url_for('portfolio.static', filename='images/banner.jpg') }}"> 
+                
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('portfolio.static', filename='js/script.js') }}"></script>
+</body>
+</html>
