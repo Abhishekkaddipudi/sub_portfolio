@@ -389,43 +389,61 @@ window.addEventListener('load', function() {
 });
 
 
+let allCards = [];
 
-
-
-fetch('/portfolio/portfolio/static/cards.json')
-.then(response => response.json())
-.then(cards => {
+function renderCards(cards) {
     const container = document.getElementById('cards-grid');
+    container.innerHTML = ''; // Clear previous content
 
     cards.forEach(card => {
-    const article = document.createElement('article');
-    article.className = card.class;
-    const a = document.createElement('a');
-    a.href = card.href;
-    a.target = "_blank";
-    a.rel = "noopener noreferrer";
-    a.style.textDecoration = 'none';
+        const article = document.createElement('article');
+        article.className = card.class;
 
-    const img = document.createElement('img');
-    img.src = card.img.src;
-    img.alt = card.img.alt;
-    img.className = card.img.class;
+        const a = document.createElement('a');
+        a.href = card.href;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.style.textDecoration = 'none';
 
-    const title = document.createElement('h3');
-    title.className = 'card-title';
-    title.textContent = card.title;
+        const img = document.createElement('img');
+        img.src = card.img.src;
+        img.alt = card.img.alt;
+        img.className = card.img.class;
 
-    const description = document.createElement('p');
-    description.className = card.descriptionClass;
-    description.textContent = card.description;
+        const title = document.createElement('h3');
+        title.className = 'card-title';
+        title.textContent = card.title;
 
+        const description = document.createElement('p');
+        description.className = card.descriptionClass;
+        description.textContent = card.description;
 
-    
-    article.appendChild(img);
-    article.appendChild(title);
-    article.appendChild(description);
-    a.appendChild(article);
-    container.appendChild(a);
+        article.appendChild(img);
+        article.appendChild(title);
+        article.appendChild(description);
+        a.appendChild(article);
+        container.appendChild(a);
     });
-})
-.catch(error => console.error('Error loading cards:', error));
+}
+
+function filterCards(tag) {
+    if (tag === 'all') {
+        renderCards(allCards);
+    } else {
+        const filtered = allCards.filter(card => card.tag === tag);
+        renderCards(filtered);
+    }
+}
+
+// Load and render all cards on page load
+fetch('/portfolio/portfolio/static/cards.json')
+    .then(response => response.json())
+    .then(cards => {
+        allCards = cards;
+        renderCards(allCards);
+    })
+    .catch(error => console.error('Error loading cards:', error));
+
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+        document.getElementById('nav-links').classList.toggle('show');
+    });

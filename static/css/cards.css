@@ -81,7 +81,7 @@
     background-color: #245F73;
 }
 .card-black:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px #245F73;
 }
 
 .card-white {
